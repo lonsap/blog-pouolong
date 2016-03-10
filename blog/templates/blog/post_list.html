@@ -13,8 +13,13 @@
             <p>Comme il en est ainsi, tout le monde se pliera à la règle et on ne s'en portera que mieux</div>
 
         <div>
-            <p>publié le: 10.03.2016, 16:45</p>
-            <h2><a href="">Mon deuxième post</a></h2>
-            <p>Comme il en est ainsi, tout le monde se pliera à la règle et on ne s'en portera que mieux</div>
+            {% for post in posts %}
+                  <div>
+                       <p>publié: {{ post.published_date }}</p>
+                       <h1><a href="">{{ post.title }}</a></h1>
+                       <p>{{ post.text|linebreaks }}</p>
+                  </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
