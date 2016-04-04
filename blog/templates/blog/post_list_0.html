@@ -3,13 +3,12 @@
 
 
 {% block content %}
-    {% for post in posts %}
+    {% for post in object_list %}
         <div class="post">
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.titre }}</a></h2>
         </div>
     {% endfor %}
 {% endblock content %}

@@ -1,0 +1,32 @@
+{% extends 'boite/base.html' %}
+
+{% block content %}
+
+    {% for entr in entrs %}
+        <div class="entr">
+            <div class="date">
+                {{ entr.date_creation }}
+            </div>
+            <table>
+				<tr>
+					<td>
+
+						<h3><a href="" onclick="bascule('{{entr.id}}'); return false;">{{ entr.raison_sociale }}</a></h3>
+						<!--span class="img src='{{ entr.logo.url }}'" onmouseover="I am Green and today is {% now "d-n-Y" %}"-->
+						<img src="{{ entr.logo.url }}"/>
+						<div id= '{{entr.id}}' style='display:none;'><h5>{{ entr.description|linebreaks }}</h5></div>
+
+
+						<!-- h3><a href="{% url 'entr_detail' pk=entr.pk %}">{{ entr.raison_sociale }}</a></h3 -->
+					</td>
+					<td width="10%">
+						<!--img src="{{ entr.logo.url }}"/-->
+					</td>
+				</tr>
+            </table>
+        </div>
+    {% endfor %}
+{% endblock content %}
+
+
+

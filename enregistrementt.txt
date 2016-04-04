@@ -1,0 +1,67 @@
+fiche signalétique 
+Secteur d'activité, Raison sociale, Adresse postale et téléphonique, Site internet et courriel, Organigramme
+activités, expliquer ses objectifs, citer ses principaux partenaires
+
+?	La saisie des données transmises par les entreprises sera faite par l'équipe de l'AnnuaireOnline afin de respecter l'impératif d'harmonisation et de qualité.
+?	Tous les 3 mois, un courriel sera envoyé aux entreprises afin d'assurer la mise à jour des données : nouveaux messages, modification dans l'organigramme, nouvelles photos etc
+
+Raison Sociale :
+Forme juridique : SA – SARL – SP – SPRL – SM (Société Mixte) – Etatique*
+
+Numéro de Registre de Commerce : 
+
+Adresse géographique : 
+Ville :
+Rue : 
+B.P :
+Tél. :
+Fax : 
+      e-mail : 
+
+     Site Web :
+
+Secteur d'activité :
+
+Sous secteur d'activité :
+
+Marque de production :
+
+Sociétés locales Partenaires (Nom et adresse complète) :
+
+Sociétés étrangères Partenaires (Nom et adresse complète, Tél., e-mail, Site web) : 
+
+Succursales :
+
+
+
+DIRECTION DE L’ENTREPRISE
+Directeur
+Nom		:
+Prénom		:
+Titre/Fonction*	:
+Téléphone		:
+Mobile		:
+Fax			:
+E-mail		:
+
+Directeur
+Nom		: 
+Prénom		:
+Titre/Fonction	:
+Adresse		:
+Téléphone		:
+Mobile		:
+Fax			:
+E-mail		:
+
+Directeur
+      Nom		: 
+      Prénom		:
+      Titre/Fonction	:
+      Téléphone		:
+       Mobile		:
+       Fax		:
+       E-mail		:
+
+Notes : Dans ces « Notes » le chef d'entreprise peut développer toutes sortes d'idées (projets de partenariats national ou international, de développement à l'export, de développement de la production, d'expansion géographique etc.)
+

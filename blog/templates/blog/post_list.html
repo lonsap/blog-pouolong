@@ -3,12 +3,17 @@
 
 
 {% block content %}
-    {% for post in posts %}
+    {% for post in object_list %}
         <div class="post">
             <div class="date">
                 {{ post.published_date }}
             </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+
+			<h3><a href="" onclick="bascule('{{post.id}}'); return false;">{{ post.titre }}</a></h3>
+			<!--h3><a href="" onmouseover="ouvre('{{post.id}}'); onmouseout=ferme('{{post.id}}'); return false;">{{ post.titre }}</a></h3-->
+			<div id= '{{post.id}}' style='display:none;'><h5>{{ post.texte|linebreaks }}</h5></div>
+
         </div>
     {% endfor %}
+
 {% endblock content %}

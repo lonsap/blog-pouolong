@@ -1,0 +1,14 @@
+{% extends 'boite/base.html' %}
+
+
+
+{% block content %}
+    {% for entr in entrs %}
+        <div class="entr">
+            <div class="date">
+                {{ entr.date_creation }}
+            </div>
+            <h2><a href="{% url 'entr_detail' pk=entr.pk %}">{{ entr.raison_sociale }}</a></h2>
+        </div>
+    {% endfor %}
+{% endblock content %}

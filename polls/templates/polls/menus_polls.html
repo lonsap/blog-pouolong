@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+
+
+{% block content %}
+
+	<h1><a href="" onclick="bascule('1'); return false;">Qui sommes nous ?</a></h1>
+	<div id= '1' style='display:none;'><h3>Nous sommes une petite entreprise albigeoise<br/>qui à vu le jour le mois dernier... <input type="button" onclick="bascule('11'); return false;" name="detail" value="détail"></h3>
+		<div id= '11' style='display:none;'><h4>Notre directrice est pour le moment l'unique salarié<br/>nous recrutons de temps en temps un CDD </h4>
+		</div>
+	</div>
+
+	<h1><a href="" onclick="bascule('2'); return false;">Que faisons nous ?</a></h1>
+	<div id= '2' style='display:none;'><h3>Nous organisons des évènements<br/>assurons le relationnel entre personnes <br/>morales ou physiques ... <input type="button" onclick="bascule('22'); return false;" name="detail" value="détail"></h3>
+		<div id= '22' style='display:none;'><h4>Nous intervenons dans l'organisation de<br/>- mariage<br/>- anniversaires<br/>- conseil d'administration<br/>- etc... </h4>
+		</div>
+	</div>
+
+	<h1><a href="" onclick="bascule('3'); return false;">Nous contacter</a></h1>
+	<div id= '3' style='display:none;'><h3>Vous nous trouvez au :<br/>13 rue André MACHET <br/>81000 Albi<br/>
+	<input type="button" onclick="bascule('33'); return false;" name="plan" value="plan"></h3>
+		<div id= '33' style='display:none;'><h4>Le plan d'Albi + localisation<br/></h4>
+		</div>
+	</div>
+                    <!--h3>Un jour, une certaine personne m'a dit : {{ "salut l'ami !"|upper }}</h3-->
+
+{% endblock content %}

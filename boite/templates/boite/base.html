@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Nos Petits Business</title>
+        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/boite.css' %}">
+		<script language="javascript" type="text/javascript">
+        <!--
+			function bascule(elem)
+			{
+			   etat=document.getElementById(elem).style.display;
+			   if(etat=="none")
+				   document.getElementById(elem).style.display="block";
+			   else
+				   document.getElementById(elem).style.display="none";
+			}
+
+			function ouvre(elem)
+			{
+			   document.getElementById(elem).style.display="block";
+			}
+
+			function ferme(elem)
+			{
+			   document.getElementById(elem).style.display="none";
+			}
+
+		-->
+		</script>
+
+    </head>
+    <body>
+        <div class="page-header">
+            <a href="" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h1><a href="/">Nos Petits Business</a></h1>
+            <p>Nous sommes le {{ date }}  | <a href="/new_blog">Consulter le blog</a>
+             | <!--a href="/voir_contacts">Afficher les contacts</a></p-->
+       </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

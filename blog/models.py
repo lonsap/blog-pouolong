@@ -4,8 +4,8 @@ from django.utils import timezone
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=200)
-    text = models.TextField()
+    titre = models.CharField(max_length=200)
+    texte = models.TextField()
     created_date = models.DateTimeField(
             default=timezone.now)
     published_date = models.DateTimeField(
@@ -16,4 +16,13 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return self.titre
+        
+        
+class Contact(models.Model):
+    nom = models.CharField(max_length=255)
+    adresse = models.TextField()
+    photo = models.ImageField(upload_to="photos/")
+    
+    def __str__(self):
+           return self.nom

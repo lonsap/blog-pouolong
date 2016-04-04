@@ -1,18 +1,41 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>blog pouolong</title>
+        <title> Blog po lonsap </title>
         <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<script language="javascript" type="text/javascript">
+        <!--
+		function bascule(elem)
+		{
+		   etat=document.getElementById(elem).style.display;
+		   if(etat=="none")
+		       document.getElementById(elem).style.display="block";
+		   else
+		       document.getElementById(elem).style.display="none";
+		}
+
+		function ouvre(elem)
+		{
+		   document.getElementById(elem).style.display="block";
+		}
+
+		function ferme(elem)
+		{
+		   document.getElementById(elem).style.display="none";
+		}
+
+		-->
+		</script>
+
     </head>
     <body>
         <div class="page-header">
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/">blog po lonsap</a></h1>
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h1><a href="/"> Blog po lonsap </a></h1>
+            <p>Nous sommes le {{ date }} | <a href="/" style="right:10px">Voir la liste des entreprises</a> | </p>
         </div>
 
         <div class="content container">

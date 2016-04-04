@@ -1,0 +1,87 @@
+{% extends 'boite/base.html' %}
+
+{% block content %}
+    <div class="entr">
+        {% if entr.date_creation %}
+            <div class="date">
+                <p> Créée le : {{ entr.date_creation }}</p>
+            </div>
+        {% endif %}
+
+        <!--a class="btn btn-default" href="{% url 'entr_edit' pk=entr.pk %}"><span class="glyphicon glyphicon-pencil"></span></a-->
+
+		<table>
+			<tr>
+				<td width=50%>
+
+
+
+					<h1>{{ entr.raison_sociale }}</h1>
+                </td>
+                <td width=10%>
+                    <img src="{{ entr.logo.url }}"/>
+                </td>
+                <td width=20%>
+					<h4>Responsable : {{ entr.responsable }}</h4>
+                </td>
+            </tr>
+		</table>
+		<table border=0>
+		    <tr>
+				<td>
+					<h1><a href="" onclick="bascule('1'); return false;">Qui sommes nous ?</a></h1>
+					<div id= '1' style='display:none;'><h4>{{ entr.description_resume }}... <input type="button" onclick="bascule('11'); return false;" name="detail" value="détail"></h4>
+						<div id= '11' style='display:none;'><h5>{{ entr.description|linebreaks }} </h5>
+						</div>
+					</div>
+				</td>
+				<td width=60% rowspan="4">
+
+					<p align="right"><img src="{{ entr.image.url }}"/></p><p>{{ entr.secteur_activite.description_sect|linebreaks }}</p>
+
+				</td>
+		    </tr>
+		    <tr>
+
+				<td>
+					<h1><a href="" onclick="bascule('2'); return false;">Que faisons nous ?</a></h1>
+					<div id= '2' style='display:none;'><h4>{{ entr.metier_ent.libelle_meti }}... <input type="button" onclick="bascule('22'); return false;" name="detail" value="détail"></h4>
+						<div id= '22' style='display:none;'><h5>{{ entr.metier_ent.description_meti|linebreaks }}</h5>
+						</div>
+					</div>
+				</td>
+				<td>
+				</td>
+
+		    </tr>
+		    <tr>
+				<td>
+					<h1><a href="" onclick="bascule('3'); return false;">News</a></h1>
+					<div id= '3' style='display:none;'><class="date"> <h4> Une date : {{ entr.evenement_entr.date_evt }}<br/><br/>
+					    un évènement :{{ entr.evenement_entr.titre_evt|linebreaks }}
+					    De quoi s'agit-il ? : {{ entr.evenement_entr.resume_evt|linebreaks }}
+					    <input type="button" onclick="bascule('33'); return false;" name="detail" value="détail"></h4>
+						<div id= '33' style='display:none;'><h5>{{ entr.evenement_entr.detail_evt|linebreaks }}</h5>
+						</div>
+					</div>
+				</td>
+				<td>
+				</td>
+		    </tr>
+		    <tr>
+				<td>
+					<h1><a href="" onclick="bascule('4'); return false;">Nous contacter</a></h1>
+					<div id= '4' style='display:none;'><h4>Nous sommes au : {{ entr.adresse_postale.numero_et_rue|linebreaks }}{{ entr.adresse_postale.code_postal_commune|linebreaks }}
+					<input type="button" onclick="bascule('44'); return false;" name="plan" value="Adresse e-mail et/ou téléphone"></h4>
+						<div id= '44' style='display:none;'><h5>E-mail : {{ entr.adresse_mail }}<br/>Tel. : {{ entr.telephone }}</h5>
+						</div>
+					</div>
+				</td>
+				<td>
+				</td>
+		    </tr>
+		</table>
+        <h5 align="right"><a href="/"><input type="button" value="<<< Retour à la liste des entreprises"</a></h5>
+        <!--p>{{ entr.description|linebreaks }}</p-->
+    </div>
+{% endblock %}
